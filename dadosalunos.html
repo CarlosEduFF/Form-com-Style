@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title> Cadastro de Alunos</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: #000000;
+            }
+
+            form {
+                width: 80%;
+                align-items: center;
+                margin: 0 auto;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                border-radius: 10px;
+                padding: 20px;
+            }
+
+            fieldset {
+                border: none;
+                margin-bottom: 20px;
+            }
+
+            legend {
+                font-size: 30px;
+                font-weight: bold;
+                color: #008CBA;
+            }
+
+            input[type="text"],
+            select {
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                width: 100%;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+            }
+
+            select {
+                height: 30px;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                background-color: #000;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+                }
+
+            input[type="submit"]:hover,
+            input[type="reset"]:hover {
+                background-color: #000;
+                color: #fff;
+            }
+        </style>
+        <form name="form1" action="dadosalunos.php" method="POST">
+            <fieldset style="width: 40%">
+              <legend>
+                Dados Pessoais
+              </legend>
+              Nome <input type="text" name="txtnome" size="50"><br>
+              Telefone <input type="text" name="txttelefone" size="20" maxlength="14"><br>
+              RG <input type="text" name="txtRG" size="14" maxlength="15">
+            </fieldset><br>
+          
+            <fieldset style="width: 40%">
+              <legend>
+                Dados Escolares
+              </legend>
+              Curso <select name="cbocursos">
+                <option value="Informática">Informática</option>
+                <option value="Administração">Administração</option>
+                <option value="Enfermagem">Enfermagem</option>
+                <option value="Alimentos">Alimentos</option>
+              </select> <br>
+              Modulo<input type="text" name="txtmodulo" size="10">
+            </fieldset>
+
+            <fieldset style="width: 40%">
+                <legend>
+                  Opções
+                </legend>
+                <div style="display: flex; justify-content: space-between;">
+                  <input type="submit" value="Confirmar" style="width: 150px;">
+                  <input type="reset" value="Limpar" style="width: 150px;">
+                </div>
+              </fieldset><br>
+
+          </form>          
+    </body>
+</html>
